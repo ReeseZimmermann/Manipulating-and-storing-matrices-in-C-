@@ -48,6 +48,7 @@ ostream& operator<< (ostream& s, const SparseMatrix& sm);
 displayMatrix (); //Display the matrix in its original format
 //other methods that are necessary such as get and set
 };
+
 #include <iostream>
 using namespace std;
 //define all your classes here (as given above)
@@ -80,16 +81,21 @@ temp = (*(*firstOne).Multiply(secondOne));
 cout << temp;
 (*temp).displayMatrix();
 }
+
 You must ensure that your program outputs the correct results. Make sure that you know matrix transpose, addition, and multiplication. Write those methods. Your input for each matrix will have the following structure. Note that in the first line, we have 5 rows, 8 columns, 0 being the common value and 10 being the number of non-sparse values.
+
 5 8 0 10
 100 0 0 900 0 500 0 0
 0 0 0 0 200 0 0 300
 0 400 0 0 0 0 800 0
 0 0 200 0 0 0 0 0
 1600 0 0 0 700 0 0 0
+
 After the first input matrix you will read the second input matrix which will have the similar format.
 You must ensure that your program outputs the correct results.
+
 Redirected Input: Redirected input provides you a way to send a file to the standard input of a program without typing it using the keyboard. To use redirected input in Visual Studio environment, follow these steps: After you have opened or created a new project, on the menu go to project, project properties, expand configuration properties until you see Debugging, on the right you will see a set of options, and in the command arguments type “< input filename”. The < sign is for redirected input and the input filename is the name of the input file (including the path if not in the working directory). A simple program that reads a matrix can be found below.
+
 #include <iostream>
 using namespace std;
 int main () {
@@ -102,5 +108,6 @@ cout << rn << cn << val << endl;
 }
 return 0;
 }
-Constraints
+
+Constraints:
 1. In this project, the only header you will use is #include <iostream> and using namespace std.
